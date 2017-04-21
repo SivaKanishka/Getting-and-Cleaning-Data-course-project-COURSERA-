@@ -32,6 +32,9 @@ activity_labels <- read.table("activity_labels.txt")
 # Changing Variable names
 colnames(df) <- c("subject_id", feature_names, "activity")
 
+# Changing class of subject_id variable to factor
+df$subject_id <- as.factor(df$subject_id)
+
 # Assigning activity labels to activity variable vector
 df$activity <- as.factor(df$activity)
 levels(df$activity) <- activity_labels$V2
