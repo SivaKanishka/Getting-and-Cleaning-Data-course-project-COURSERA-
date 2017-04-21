@@ -50,4 +50,7 @@ colnames(df) <- gsub("-", "", colnames(df))
 df_new <- df %>% group_by(subject_id, activity) %>% summarise_each(funs(mean))
 
 # Rearranging to place label as the last column
-df_final <- df %>% select(subject_id, TimeBodyAccelMeanX:FreqBodyGyroJerkMagStd, activity)
+df_final <- df_new %>% select(subject_id, TimeBodyAccelMeanX:FreqBodyGyroJerkMagStd, activity)
+
+# Writing the condensed file
+write.table(df_final, file = "Final_Table.txt", row.names = FALSE)
