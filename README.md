@@ -1,5 +1,5 @@
 ### Course project
-This repo contains R script file and code book file of the project.  
+This repo contains R script and code book of the project.  
 
 *This file will expalin all the steps carried out during the project*  
 
